@@ -31,8 +31,9 @@
     leaf["wd0"] = leaf["wd0"] "!!! " $0;
 };
 
-/^root on sd0/ {
-    leaf["sd0"] = leaf["sd0"] "!!! " $0;
+/^root on sd/ {
+    _s=substr($3,1,3);
+    leaf[_s] = leaf[_s] "!!! " $0;
 };
 
 END{
