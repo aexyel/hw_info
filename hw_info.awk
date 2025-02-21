@@ -10,6 +10,8 @@
     };
 };
 
+/ detached/ {delete leaf[$1];delete par[$1];};
+
 {
     if(index($1,":")!=0) {
         _l=gensub(":","","",$1);
